@@ -5,3 +5,5 @@ apt-get install build-essential openssl
 apt-get install zlibc minizip 
 apt-get install libidn11-dev libidn11
 
+apt-get install libelf-dev
+

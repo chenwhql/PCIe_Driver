@@ -17,7 +17,7 @@ int main (int argc, char* argv[])
 	}
 	int fd;
 
-	fd = open("/dev/dev_driver",O_RDWR);
+	fd = open("/dev/rtnic",O_RDWR);
 	if(fd < 0)
 	{
 		printf("open error.\n");
@@ -30,7 +30,7 @@ int main (int argc, char* argv[])
 
 	long res = ioctl(fd, cmd, loop);
 	
-	printf("cmd = %d, len = %d\n", cmd, loop);
+	printf("cmd = %ld, len = %ld\n", cmd, loop);
 	printf("res = %ld\n", res);
 	close(fd);
 	return 0;
